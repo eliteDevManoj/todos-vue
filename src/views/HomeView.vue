@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BaseModal title="Add new task" v-if="showTaskModal" @close="toggleTaskModal"/>
+    <BaseButton class="btn-primary"  type="submit" label="save" @click="toggleTaskModal"/>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script setup>
+import BaseButton from '../components/BaseButton.vue'
+import BaseModal from '../components/BaseModal.vue'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+import { ref } from 'vue'
+
+const showTaskModal = ref(false)
+
+function toggleTaskModal() {
+  showTaskModal.value = !showTaskModal.value
 }
+
 </script>
