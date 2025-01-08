@@ -4,7 +4,7 @@
 
 <style scoped>
 .btn {
-    width: 100px;
+    width: 75px;
     max-width: 100px;
     height: 35px;
     max-height: 35px;
@@ -17,14 +17,14 @@
 }
 
 .btn-primary {
-    box-shadow: 4px 4px 5px #030f8f;
-    background: linear-gradient(180deg, #0011bf, #3c4dff);
+    box-shadow: 2px 3px 6px #030f8f;
+    background: linear-gradient(90deg, #515ff3, #818bff);
     color: white;
 }
 
 .btn-danger {
-    box-shadow: 4px 4px 5px #850606;;
-    background: linear-gradient(180deg, #cf0000, #e7000070);
+    box-shadow: 2px 3px 6px #850606;
+    background: linear-gradient(90deg, #fb1b1b, #f91f1f70);
     color: white;
 }
 
@@ -34,8 +34,8 @@
 }
 
 .btn-success {
-    box-shadow: 4px 4px 5px #005b00;
-    background: linear-gradient(180deg, #005b00, #3cdb3c);
+    box-shadow: 2px 3px 6px #005b00;
+    background: linear-gradient(90deg, #00a500, #20cf20);
     color: white;
 }
 
@@ -55,7 +55,7 @@ import { computed } from 'vue'
 
 const props = defineProps({
     class: String,
-    style: String,
+    style: Object,
     type: String,
     label: String,
     disabled: Boolean

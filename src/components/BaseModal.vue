@@ -14,8 +14,8 @@ Nullam ligula metus, iaculis quis dui et, volutpat faucibus felis. Quisque trist
         </p>
        </div>
         <div class="modal-footer">
-            <BaseButton type="button" class="btn-success" label="save"/>
-            <BaseButton type="button" class="btn-danger" label="cancel" @click="closeModal"/>
+            <BaseButton type="button" class="btn-success" label="save" style="margin-right: 10px;"/>
+            <BaseButton type="button" class="btn-danger" label="cancel" style="margin-left: 10px;" @click="closeModal"/>
         </div>
     </div>
 </template>
@@ -96,7 +96,7 @@ import BaseButton from './BaseButton.vue'
 const props = defineProps({
     title: String,
     class: String,
-    style: String
+    style: Object
 })
 
 const emit = defineEmits(['close'])
