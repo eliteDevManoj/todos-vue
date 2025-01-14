@@ -1,15 +1,13 @@
 <template>
     <div>
         <table>
-            <tr class="table-header">
-                <th
-                    v-for="(header, i) in headers"
-                    :key="`${header}${i}`"
-                    class="header-item"
-                >
-                {{ header }}
-                </th>
-            </tr>
+            <th
+                v-for="(header, i) in headers"
+                :key="`${header}${i}`"
+                class="header-item"
+            >
+            {{ header }}
+            </th>
             <tr
                 v-for="entity in items"
                 :key="`entity-${entity.name}`"
@@ -39,17 +37,13 @@ const props = defineProps({
 <style scoped>
 
     table {
-        background: #f9f7f7;
+        background: #f1f1f1;
         margin-top: 10px;
         border: 1px solid #e5e2e2;
         box-shadow: 4px 4px 4px #afa6a6;
         border-radius: 5px;
         padding: 2%;
         width: 100%;
-    }
-
-    .table-header {
-
     }
 
     .header-item {
